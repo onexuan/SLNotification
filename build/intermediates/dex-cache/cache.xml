@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/Users/wuhongqi/AndroidStudioProjects/my_project_github/SLNotification/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/25.1.0/jars/classes.jar"
+        jumboMode="false"
+        revision="24.0.3"
+        sha1="f02263e35e52668dd17b73bf961437e3d562b35f">
+        <dex dex="/Users/wuhongqi/AndroidStudioProjects/my_project_github/SLNotification/app/build/intermediates/pre-dexed/debug/classes-3d61b1c58703e9e7fe88f2618e60b95c7352e465.jar" />
+    </item>
+    <item
+        jar="/Users/wuhongqi/AndroidStudioProjects/SLNotification/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.1.0/jars/classes.jar"
+        jumboMode="false"
+        revision="24.0.3"
+        sha1="aee64634871d88a419d59eb743c1258a60f19700">
+        <dex dex="/Users/wuhongqi/AndroidStudioProjects/SLNotification/app/build/intermediates/pre-dexed/debug/classes-94cfbe4eb1553a238b254a030fbd7673c90d45ba.jar" />
+    </item>
+    <item
+        jar="/Users/wuhongqi/AndroidStudioProjects/my_project_github/SLNotification/app/build/intermediates/exploded-aar/com.android.support/support-v4/25.1.0/jars/classes.jar"
+        jumboMode="false"
+        revision="24.0.3"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="/Users/wuhongqi/AndroidStudioProjects/my_project_github/SLNotification/app/build/intermediates/pre-dexed/debug/classes-d7dd8cd577a984f514d27c5c2a4afcf44bdb321f.jar" />
+    </item>
+    <item
+        jar="/Users/wuhongqi/AndroidStudioProjects/SLNotification/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/25.1.0/jars/classes.jar"
+        jumboMode="false"
+        revision="24.0.3"
+        sha1="e79aa3d9a16f8c9f16377c0608de70a8f31e5d80">
+        <dex dex="/Users/wuhongqi/AndroidStudioProjects/SLNotification/app/build/intermediates/pre-dexed/debug/classes-3b7b44e352ab50fb6c38704bd8d3cabb9624a540.jar" />
+    </item>
+    <item
+        jar="/Users/wuhongqi/AndroidStudioProjects/my_project_github/SLNotification/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.1.0/jars/classes.jar"
+        jumboMode="false"
+        revision="24.0.3"
+        sha1="aee64634871d88a419d59eb743c1258a60f19700">
+        <dex dex="/Users/wuhongqi/AndroidStudioProjects/my_project_github/SLNotification/app/build/intermediates/pre-dexed/debug/classes-6a9302a7d90b48939287cbbeac8a2d8b06492505.jar" />
+    </item>
+    <item
+        jar="/Users/wuhongqi/AndroidStudioProjects/my_project_github/SLNotification/app/build/intermediates/exploded-aar/com.android.support/support-fragment/25.1.0/jars/classes.jar"
+        jumboMode="false"
+        revision="24.0.3"
+        sha1="2a53c4f3518116b8c6aee0e477233f0f7da8616f">
+        <dex dex="/Users/wuhongqi/AndroidStudioProjects/my_project_github/SLNotification/app/build/intermediates/pre-dexed/debug/classes-a8506869ce2dda51b44621c75bc62b7ef9a4c614.jar" />
+    </item>
+    <item
+        jar="/Users/wuhongqi/AndroidStudioProjects/SLNotification/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/25.1.0/jars/classes.jar"
+        jumboMode="false"
+        revision="24.0.3"
+        sha1="6fb6ac3e8d3b9013819920d9ea11f3803c4c0033">
+        <dex dex="/Users/wuhongqi/AndroidStudioProjects/SLNotification/app/build/intermediates/pre-dexed/debug/classes-76fe7f0d5b6d24635a4eeb5f99ebaffc5b3c6d42.jar" />
+    </item>
+    <item
+        jar="/Users/wuhongqi/AndroidStudioProjects/SLNotification/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/25.1.0/jars/classes.jar"
+        jumboMode="false"
+        revision="24.0.3"
+        sha1="f02263e35e52668dd17b73bf961437e3d562b35f">
+        <dex dex="/Users/wuhongqi/AndroidStudioProjects/SLNotification/app/build/intermediates/pre-dexed/debug/classes-8b2b0ba769c9021eac792a631cc5917a946ff558.jar" />
+    </item>
+    <item
+        jar="/Users/wuhongqi/AndroidStudioProjects/my_project_github/SLNotification/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/25.1.0/jars/classes.jar"
+        jumboMode="false"
+        revision="24.0.3"
+        sha1="e79aa3d9a16f8c9f16377c0608de70a8f31e5d80">
+        <dex dex="/Users/wuhongqi/AndroidStudioProjects/my_project_github/SLNotification/app/build/intermediates/pre-dexed/debug/classes-5a9889e1d584564cd7af51a0a110666b536c2ba4.jar" />
+    </item>
+    <item
+        jar="/Users/wuhongqi/AndroidStudioProjects/my_project_github/SLNotification/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.1.0/jars/classes.jar"
+        jumboMode="false"
+        revision="24.0.3"
+        sha1="0a0ef86b7fa568a52bf6214a0326ca1f1d618da7">
+        <dex dex="/Users/wuhongqi/AndroidStudioProjects/my_project_github/SLNotification/app/build/intermediates/pre-dexed/debug/classes-36ac7e965e6337a7cf8ad6c8f5f3fd084a944871.jar" />
+    </item>
+    <item
+        jar="/Users/wuhongqi/AndroidStudioProjects/my_project_github/SLNotification/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.1.0/jars/classes.jar"
+        jumboMode="false"
+        revision="24.0.3"
+        sha1="ca3c7aa31e2726a400a6e552b93cb9f63c9a1e6d">
+        <dex dex="/Users/wuhongqi/AndroidStudioProjects/my_project_github/SLNotification/app/build/intermediates/pre-dexed/debug/classes-07004b744bef029fd91b8d07d2567d0460ab409b.jar" />
+    </item>
+    <item
+        jar="/Users/wuhongqi/AndroidStudioProjects/SLNotification/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/jars/classes.jar"
+        jumboMode="false"
+        revision="24.0.3"
+        sha1="1630658fbc2d222b988603c27b4a4249586fbfe7">
+        <dex dex="/Users/wuhongqi/AndroidStudioProjects/SLNotification/app/build/intermediates/pre-dexed/debug/classes-e9a022756f40c1ca53832551abe1d91d585512d2.jar" />
+    </item>
+    <item
+        jar="/Users/wuhongqi/Downloads/android-sdk-macosx/extras/android/m2repository/com/android/support/support-annotations/25.1.0/support-annotations-25.1.0.jar"
+        jumboMode="false"
+        revision="24.0.3"
+        sha1="64cb6b229a8bdfd907bc8dd46839a0053e4c018d">
+        <dex dex="/Users/wuhongqi/AndroidStudioProjects/SLNotification/app/build/intermediates/pre-dexed/debug/support-annotations-25.1.0-a45a493b90829db6488d4665a5a1ff84a119793e.jar" />
+    </item>
+    <item
+        jar="/Users/wuhongqi/AndroidStudioProjects/my_project_github/SLNotification/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/25.1.0/jars/classes.jar"
+        jumboMode="false"
+        revision="24.0.3"
+        sha1="6fb6ac3e8d3b9013819920d9ea11f3803c4c0033">
+        <dex dex="/Users/wuhongqi/AndroidStudioProjects/my_project_github/SLNotification/app/build/intermediates/pre-dexed/debug/classes-78033a61956810d88301650822e3970ec2dcfc59.jar" />
+    </item>
+    <item
+        jar="/Users/wuhongqi/AndroidStudioProjects/SLNotification/app/build/intermediates/exploded-aar/com.android.support/support-v4/25.1.0/jars/classes.jar"
+        jumboMode="false"
+        revision="24.0.3"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="/Users/wuhongqi/AndroidStudioProjects/SLNotification/app/build/intermediates/pre-dexed/debug/classes-fed56b4e26976064b0df6efa7d3bbfbde2a0b8db.jar" />
+    </item>
+    <item
+        jar="/Users/wuhongqi/AndroidStudioProjects/SLNotification/app/build/intermediates/exploded-aar/com.android.support/support-fragment/25.1.0/jars/classes.jar"
+        jumboMode="false"
+        revision="24.0.3"
+        sha1="2a53c4f3518116b8c6aee0e477233f0f7da8616f">
+        <dex dex="/Users/wuhongqi/AndroidStudioProjects/SLNotification/app/build/intermediates/pre-dexed/debug/classes-429d08e4670300c60a46fddb3b7629472278dda2.jar" />
+    </item>
+    <item
+        jar="/Users/wuhongqi/AndroidStudioProjects/SLNotification/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.1.0/jars/classes.jar"
+        jumboMode="false"
+        revision="24.0.3"
+        sha1="ca3c7aa31e2726a400a6e552b93cb9f63c9a1e6d">
+        <dex dex="/Users/wuhongqi/AndroidStudioProjects/SLNotification/app/build/intermediates/pre-dexed/debug/classes-4a8284b6256345f02ac60d9aa1bddbfb3ca3a553.jar" />
+    </item>
+    <item
+        jar="/Users/wuhongqi/AndroidStudioProjects/SLNotification/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.1.0/jars/classes.jar"
+        jumboMode="false"
+        revision="24.0.3"
+        sha1="0a0ef86b7fa568a52bf6214a0326ca1f1d618da7">
+        <dex dex="/Users/wuhongqi/AndroidStudioProjects/SLNotification/app/build/intermediates/pre-dexed/debug/classes-e11f1a7e6b1d0cc59545013654f8f968d2e543d8.jar" />
+    </item>
+    <item
+        jar="/Users/wuhongqi/AndroidStudioProjects/my_project_github/SLNotification/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/jars/classes.jar"
+        jumboMode="false"
+        revision="24.0.3"
+        sha1="1630658fbc2d222b988603c27b4a4249586fbfe7">
+        <dex dex="/Users/wuhongqi/AndroidStudioProjects/my_project_github/SLNotification/app/build/intermediates/pre-dexed/debug/classes-f8f46c60d546f3ffbf9789a00d054e9cb7e3828c.jar" />
+    </item>
+
+</items>
