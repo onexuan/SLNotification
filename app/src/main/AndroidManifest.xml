@@ -4,7 +4,7 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/comm_ic_notification"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
@@ -16,6 +16,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".NormalNotificationActivity"></activity>
+        <activity android:name=".CustomNotificationActivity"></activity>
+        <receiver android:name=".broadcast.NotificationBroadcastReceiver"></receiver>
     </application>
 
 </manifest>

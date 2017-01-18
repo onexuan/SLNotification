@@ -4,14 +4,21 @@
     android:layout_height="match_parent">
 
     <Button
-        android:id="@+id/suo_btn1"
+        android:id="@+id/btn_custom1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="普通通知"/>
+        android:text="简单自定义通知"/>
 
     <Button
-        android:id="@+id/suo_btn2"
+        android:id="@+id/btn_custom2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="自定义通知"/>
+        android:text="适配系统字体颜色和大小的自定义通知"/>
+
+    <Button
+        android:id="@+id/btn_custom3"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="自带回复的通知"/>
 </LinearLayout>

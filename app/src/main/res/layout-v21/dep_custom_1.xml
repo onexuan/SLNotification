@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <ImageView
+        android:id="@+id/iv_custom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/android"/>
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_toRightOf="@+id/iv_custom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:textAppearance="@android:style/TextAppearance.Material.Notification.Title"
+        android:text=""/>
+
+    <TextView
+        android:id="@+id/tv_content"
+        android:layout_toRightOf="@+id/iv_custom"
+        android:layout_below="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:textAppearance="@android:style/TextAppearance.Material.Notification.Info"
+        android:text=""/>
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_alignParentRight="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:layout_marginRight="10dp"
+        android:textAppearance="@android:style/TextAppearance.Material.Notification.Time"
+        android:text="11:37"/>
+
+    <ImageView
+        android:id="@+id/iv_logo"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/comm_ic_notification"/>
+</RelativeLayout>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/btn_normal1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="最普通的通知"/>
+
+    <Button
+        android:id="@+id/btn_normal2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="正在进行中的通知"/>
+
+    <Button
+        android:id="@+id/btn_normal3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="监听清空的通知"/>
+
+    <Button
+        android:id="@+id/btn_normal4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Style通知"/>
+
+    <Button
+        android:id="@+id/btn_normal5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="带进度条的通知"/>
+
+    <Button
+        android:id="@+id/btn_normal6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="MIN优先级的通知"/>
+
+    <Button
+        android:id="@+id/btn_normal7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="MAX优先级的通知"/>
+
+    <Button
+        android:id="@+id/btn_normal8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="自带回复的通知"/>
+
+</LinearLayout>
