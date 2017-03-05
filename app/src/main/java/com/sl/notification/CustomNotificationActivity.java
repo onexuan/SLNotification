@@ -8,20 +8,16 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
-import android.support.v4.app.RemoteInput;
 import android.support.v7.app.NotificationCompat;
 import android.text.TextUtils;
 import android.util.TypedValue;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RemoteViews;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import com.sl.notification.broadcast.NotificationBroadcastReceiver;
 
 /**
  * Created by wuhongqi on 17/1/10.
@@ -51,6 +47,7 @@ public class CustomNotificationActivity extends Activity implements View.OnClick
         String tips = getIntent().getStringExtra("suoluo");
         if (!TextUtils.isEmpty(tips))
             Toast.makeText(this, "点击了自定义通知的"+tips, Toast.LENGTH_SHORT).show();
+
     }
 
     private void findViews() {
@@ -199,4 +196,5 @@ public class CustomNotificationActivity extends Activity implements View.OnClick
                 break;
         }
     }
+
 }

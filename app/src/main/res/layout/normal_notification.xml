@@ -51,4 +51,16 @@
         android:layout_height="wrap_content"
         android:text="自带回复的通知"/>
 
+    <Button
+        android:id="@+id/btn_normal9"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="带合并的通知（Group 7.0）"/>
+
+    <Button
+        android:id="@+id/btn_normal10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="带声音震动呼吸灯的通知"/>
+
 </LinearLayout>

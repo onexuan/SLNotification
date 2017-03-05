@@ -3,6 +3,8 @@ package com.sl.notification.broadcast;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.BitmapFactory;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.NotificationCompat;
 import android.support.v4.app.NotificationManagerCompat;
@@ -27,14 +29,23 @@ public class NotificationBroadcastReceiver extends BroadcastReceiver {
             CharSequence message = getReplyMessage(intent);
             int messageId = intent.getIntExtra(KEY_MESSAGE_ID, 0);
             int notifyId = intent.getIntExtra(KEY_NOTIFICATION_ID, 0);
-            Toast.makeText(context, "Message ID: " + messageId + "\nMessage: " + message,
-                    Toast.LENGTH_SHORT).show();
+//            Toast.makeText(context, "Message ID: " + messageId + "\nMessage: " + message,
+//                    Toast.LENGTH_SHORT).show();
 
             NotificationManagerCompat notificationManager = NotificationManagerCompat.from(context);
 
             NotificationCompat.Builder builder = new NotificationCompat.Builder(context)
-                    .setSmallIcon(R.drawable.comm_ic_notification)
-                    .setContentText("已回复");
+                    .setSmallIcon(R.drawable.comm_ic_notification);
+            builder.setContentTitle("我是自带回复功能的通知标题");
+            builder.setContentText("Hello")
+                    .setColor(Color.BLUE)
+                    .setAutoCancel(true)//点击后即移除
+                    .setWhen(System.currentTimeMillis())
+                    .setSmallIcon(R.drawable.kg_listen_slide_menu_logout_btn_noraml)
+                    .setLargeIcon(BitmapFactory.decodeResource(context.getResources(), R.drawable.android));
+            builder.setStyle(new NotificationCompat.MessagingStyle("Me")
+                    .addMessage("Do you want to go see a movie tonight?", System.currentTimeMillis(), "kobe")
+                    .addMessage(message, System.currentTimeMillis(), null));
 
             notificationManager.notify(notifyId, builder.build());
         }
