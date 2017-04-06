@@ -1,4 +1,7 @@
 # SLNotification
+- [x] [Android权限大全](./app/markdown/Android权限大全.md)
+
+
 深入学习Notification
 >* 原文链接 : [Notifications in Android N](https://android-developers.blogspot.hk/2016/06/notifications-in-android-n.html)
 * 原文作者 : Ian Lake

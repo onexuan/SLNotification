@@ -11,6 +11,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private Button mBtn1;
     private Button mBtn2;
+    private Button mBtn3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,9 +24,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private void findViews() {
         mBtn1 = (Button) findViewById(R.id.suo_btn1);
         mBtn2 = (Button) findViewById(R.id.suo_btn2);
+        mBtn3 = (Button) findViewById(R.id.suo_btn3);
 
         mBtn1.setOnClickListener(this);
         mBtn2.setOnClickListener(this);
+        mBtn3.setOnClickListener(this);
     }
 
     private void initData() {
@@ -44,6 +47,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.suo_btn2:
                 startActivity(new Intent(this, CustomNotificationActivity.class));
+                break;
+            case R.id.suo_btn3:
+                startActivity(new Intent(this, PrivilegeActivity.class));
                 break;
         }
     }

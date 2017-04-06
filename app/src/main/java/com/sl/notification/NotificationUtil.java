@@ -40,7 +40,7 @@ public class NotificationUtil {
     }
 
     /**
-     * 通过反射打开开关
+     * 通过反射打开开关据说5.0以下才能生效 我是一个有节操的程序员
      * @param context
      * @return
      */

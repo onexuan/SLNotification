@@ -4,20 +4,30 @@
     android:layout_height="match_parent">
 
     <Button
-        android:id="@+id/suo_btn1"
+        android:id="@+id/btn_privilege1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="普通通知"/>
+        android:text="我是一个系统Toast"/>
 
     <Button
-        android:id="@+id/suo_btn2"
+        android:id="@+id/btn_privilege2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="自定义通知"/>
+        android:text="我是一个自定义Toast"/>
+
+    <TextView
+        android:id="@+id/tv_privilege"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"/>
 
     <Button
-        android:id="@+id/suo_btn3"
+        android:id="@+id/btn_privilege3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="通知权限"/>
+        android:text="拨打电话"/>
+
 </LinearLayout>

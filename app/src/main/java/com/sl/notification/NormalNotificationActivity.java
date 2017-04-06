@@ -4,8 +4,11 @@ import android.app.AlertDialog;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.ComponentName;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.content.res.Resources;
 import android.graphics.BitmapFactory;
 import android.graphics.Color;
 import android.net.Uri;
@@ -68,6 +71,13 @@ public class NormalNotificationActivity extends AppCompatActivity implements Vie
         String tips = getIntent().getStringExtra("suoluo");
         if (!TextUtils.isEmpty(tips))
             Toast.makeText(this, tips, Toast.LENGTH_SHORT).show();
+
+//        try {
+//            Context context = getApplicationContext().createPackageContext("com.kugou.android", Context.CONTEXT_RESTRICTED);
+//            mBtn1.setBackgroundDrawable(context.getDrawable(0x7f0207af));
+//        } catch (PackageManager.NameNotFoundException e) {
+//            e.printStackTrace();
+//        }
     }
 
     private void findViews() {
@@ -172,6 +182,8 @@ public class NormalNotificationActivity extends AppCompatActivity implements Vie
         intent.putExtra("suoluo", "number:" + number);
         PendingIntent pendingIntent = PendingIntent.getActivity(this, number, intent, PendingIntent.FLAG_UPDATE_CURRENT);
 
+        Bundle bundle = new Bundle();
+        bundle.putBoolean(NotificationManagerCompat.EXTRA_USE_SIDE_CHANNEL, true);
         NotificationCompat.Builder builder = new NotificationCompat.Builder(this);
         builder.setContentTitle("SL的通知标题")
                 .setContentText("SL的通知内容，一般我都随便敲几个字，这次就认真敲一句话吧")
@@ -182,9 +194,10 @@ public class NormalNotificationActivity extends AppCompatActivity implements Vie
                 .setContentInfo("" + number)
                 .setAutoCancel(true)//点击后即移除
                 .setWhen(System.currentTimeMillis())
-
+//                .setExtras(bundle)
 
                 .setSmallIcon(R.drawable.kg_listen_slide_menu_logout_btn_noraml)
+//                .setSmallIcon(R.drawable.comm_ic_notification)
                 .setLargeIcon(BitmapFactory.decodeResource(getResources(), R.drawable.android))
                 .setContentIntent(pendingIntent);
 
@@ -200,6 +213,7 @@ public class NormalNotificationActivity extends AppCompatActivity implements Vie
                 builder.setGroupSummary(true);
             }
             builder.setGroup(GROUP_KEY);
+            builder.setContentTitle("我是group通知" + mClickCount);
         }
 
         if (needProgress) {
@@ -252,8 +266,8 @@ public class NormalNotificationActivity extends AppCompatActivity implements Vie
                         .setConversationTitle("Team lunch")
                         .addMessage("Hi", System.currentTimeMillis(), null) // Pass in null for user.
                         .addMessage("What's up?", System.currentTimeMillis(), "Coworker")
-                        .addMessage("Not much", System.currentTimeMillis(), null)
-                        .addMessage("How about lunch?", System.currentTimeMillis(), "Coworker"));
+                        .addMessage("Do you want to go see a movie tonight?", System.currentTimeMillis(), null)
+                        .addMessage("that sounds great", System.currentTimeMillis(), "Coworker"));
                 break;
             default:
                 break;
@@ -281,16 +295,7 @@ public class NormalNotificationActivity extends AppCompatActivity implements Vie
             builder.addAction(action);
         }
 
-        mNotificationManager.notify(mNotificationTag, NOTIFICATION_ID, builder.build());
-        boolean enable = NotificationUtil.isNotificationEnabled(this);
-        boolean apiEnable = NotificationManagerCompat.from(this).areNotificationsEnabled();
-        if (enable || apiEnable) {
-            Toast.makeText(this, "通知允许状态" , Toast.LENGTH_SHORT).show();
-        } else {
-            mBtn1.setText("通知禁止");
-            Toast.makeText(this, "通知禁止状态" , Toast.LENGTH_SHORT).show();
-            NotificationUtil.openNotification(this);
-        }
+        mNotificationManager.notify(mNotificationTag, NOTIFICATION_ID + mClickCount, builder.build());
     }
 
     public PendingIntent getReplyPendingIntent() {
@@ -298,7 +303,8 @@ public class NormalNotificationActivity extends AppCompatActivity implements Vie
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
             intent = new Intent(this, NotificationBroadcastReceiver.class);
             intent.setAction(NotificationBroadcastReceiver.REPLY_ACTION);
-            intent.putExtra(NotificationBroadcastReceiver.KEY_NOTIFICATION_ID, NOTIFICATION_ID + number);
+            intent.putExtra(NotificationBroadcastReceiver.KEY_NOTIFICATION_ID, NOTIFICATION_ID);
+            intent.putExtra(NotificationBroadcastReceiver.KEY_NOTIFICATION_TAG, mNotificationTag);
             intent.putExtra(NotificationBroadcastReceiver.KEY_MESSAGE_ID, number);
             return PendingIntent.getBroadcast(this, 100, intent,
                     PendingIntent.FLAG_UPDATE_CURRENT);
@@ -313,23 +319,38 @@ public class NormalNotificationActivity extends AppCompatActivity implements Vie
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
-            case R.id.btn_normal1:
-                mNotificationTag = "1";
-                showNormalNotification();
+            case R.id.btn_normal1://普通通知
+                new Thread(new Runnable() {
+                    @Override
+                    public void run() {
+//                        try {
+//                            Thread.sleep(5000);
+                            runOnUiThread(new Runnable() {
+                                @Override
+                                public void run() {
+                                    mNotificationTag = "1";
+                                    showNormalNotification();
+                                }
+                            });
+//                        } catch (InterruptedException e) {
+//                            e.printStackTrace();
+//                        }
+                    }
+                }).start();
                 break;
-            case R.id.btn_normal2:
+            case R.id.btn_normal2://正在进行中
                 mNotificationTag = "2";
                 showOnGongNotification();
                 break;
-            case R.id.btn_normal3:
+            case R.id.btn_normal3://监听清除消息
                 mNotificationTag = "3";
                 showNeedDeleteNotification();
                 break;
-            case R.id.btn_normal4:
+            case R.id.btn_normal4://不同style
                 mNotificationTag = "4";
                 showStyleNotification();
                 break;
-            case R.id.btn_normal5:
+            case R.id.btn_normal5://进度
                 mNotificationTag = "5";
                 final Handler handler = new Handler();
                 handler.postDelayed(new Runnable() {
@@ -342,27 +363,26 @@ public class NormalNotificationActivity extends AppCompatActivity implements Vie
                     }
                 }, 1000);
                 break;
-            case R.id.btn_normal6:
+            case R.id.btn_normal6://优先级
                 mNotificationTag = "6";
                 showMinPriorityNotification();
                 break;
-            case R.id.btn_normal7:
+            case R.id.btn_normal7://优先级
                 mNotificationTag = "7";
                 showMaxPriorityNotification();
                 break;
-            case R.id.btn_normal8:
+            case R.id.btn_normal8://自带回复
                 mNotificationTag = "8";
                 showReplyNotification();
                 break;
-            case R.id.btn_normal9:
+            case R.id.btn_normal9://group
                 mNotificationTag = "9";
                 mClickCount++;
                 showGroupNotification();
                 break;
-            case R.id.btn_normal10:
-//                mNotificationTag = "10";
-//                showSoundNotification();
-                SLToast.makeText(this, "自定义toast", Toast.LENGTH_SHORT).show();
+            case R.id.btn_normal10://声音
+                mNotificationTag = "10";
+                showSoundNotification();
                 break;
         }
     }

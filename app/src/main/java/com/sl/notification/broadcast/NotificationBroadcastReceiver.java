@@ -20,6 +20,7 @@ public class NotificationBroadcastReceiver extends BroadcastReceiver {
 
     public static final String REPLY_ACTION = "reply_action";
     public static String KEY_NOTIFICATION_ID = "key_notification_id";
+    public static String KEY_NOTIFICATION_TAG = "key_notification_tag";
     public static String KEY_MESSAGE_ID = "key_message_id";
     public static String KEY_REPLY = "reply";
 
@@ -29,6 +30,7 @@ public class NotificationBroadcastReceiver extends BroadcastReceiver {
             CharSequence message = getReplyMessage(intent);
             int messageId = intent.getIntExtra(KEY_MESSAGE_ID, 0);
             int notifyId = intent.getIntExtra(KEY_NOTIFICATION_ID, 0);
+            String tag = intent.getStringExtra(KEY_NOTIFICATION_TAG);
 //            Toast.makeText(context, "Message ID: " + messageId + "\nMessage: " + message,
 //                    Toast.LENGTH_SHORT).show();
 
@@ -47,7 +49,7 @@ public class NotificationBroadcastReceiver extends BroadcastReceiver {
                     .addMessage("Do you want to go see a movie tonight?", System.currentTimeMillis(), "kobe")
                     .addMessage(message, System.currentTimeMillis(), null));
 
-            notificationManager.notify(notifyId, builder.build());
+            notificationManager.notify(tag, notifyId, builder.build());
         }
 
     }
